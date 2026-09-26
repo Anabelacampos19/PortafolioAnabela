@@ -79,7 +79,7 @@ header p { color: #a6adc8; }
 .efecto-maquina-titulo {
     font-family: monospace;
     font-size: 2.4rem;
-    color: #f5c2e7; /* Color rosa hermoso para combinar con tu fondo oscuro */
+    color: #2a3132; /* Color rosa hermoso para combinar con tu fondo oscuro */
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto 25px auto;

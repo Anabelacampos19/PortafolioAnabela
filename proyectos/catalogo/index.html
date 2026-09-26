@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Jabones</title>
+    <title>Esencia Vital | Catálogo de Jabones (Proyecto de Portafolio)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="catalog-container">
-        <header>
-            <a href="../index.html" class="btn-back">← Volver a Proyectos</a>
-            <h1>🧼 Burbuja Natural</h1>
-            <p>Catálogo exclusivo de jabones artesanales y orgánicos hechos a mano.</p>
-        </header>
 
-        <main class="catalog-grid">
-            <!-- JABÓN 1 -->
-            <div class="product-card">
-                <div class="badge-genre">Relajante</div>
-                <div class="movie-poster">🪻</div>
-                <h3>Jabón de Lavanda</h3>
-                <p>Ideal para usar antes de dormir. Relaja la mente, hidrata la piel y reduce el estrés del día.</p>
-                <div class="card-footer">
-                    <span class="rating">$4.500</span>
-                    <button class="btn-info" onclick="alert('🛍️ ¡Añadido! Has sumado 1 Jabón de Lavanda a tu carrito simulado.')">Comprar</button>
-                </div>
-            </div>
+    <!-- Encabezado / Barra de Navegación -->
+    <header>
+        <div class="logo">🌿 Esencia Vital</div>
+        <!-- Al hacer clic en este botón, se abre/cierra el carrito lateral -->
+        <div class="carrito-icono" onclick="alternarCarrito()">
+            🛒 <span id="contador-carrito">0</span>
+        </div>
+    </header>
 
-            <!-- JABÓN 2 -->
-            <div class="product-card">
-                <div class="badge-genre">Exfoliante</div>
-                <div class="movie-poster">☕</div>
-                <h3>Jabón de Café y Avena</h3>
-                <p>Remueve células muertas de forma suave mientras activa la circulación sanguínea de tu piel.</p>
-                <div class="card-footer">
-                    <span class="rating">$4.800</span>
-                    <button class="btn-info" onclick="alert('🛍️ ¡Añadido! Has sumado 1 Jabón de Café y Avena a tu carrito simulado.')">Comprar</button>
-                </div>
-            </div>
-
-            <!-- JABÓN 3 -->
-            <div class="product-card">
-                <div class="badge-genre">Refrescante</div>
-                <div class="movie-poster">🍋</div>
-                <h3>Jabón de Aloe y Limón</h3>
-                <p>Perfecto para pieles grasas. Aporta una sensación de frescura cítrica y regenera los tejidos.</p>
-                <div class="card-footer">
-                    <span class="rating">$4.200</span>
-                    <button class="btn-info" onclick="alert('🛍️ ¡Añadido! Has sumado 1 Jabón de Aloe y Limón a tu carrito simulado.')">Comprar</button>
-                </div>
-            </div>
-        </main>
+    <!-- Banner Informativo para Reclutadores -->
+    <div class="banner-portafolio">
+        <p>🚀 <strong>Proyecto para Portafolio:</strong> Esta es una tienda 100% interactiva de simulación. Puedes elegir cantidades, sumar productos y completar una orden ficticia sin pasarelas de pago reales.</p>
     </div>
+
+    <!-- Contenedor Principal del Catálogo -->
+    <main>
+        <h1>Nuestro Catálogo Artesanal</h1>
+        <!-- JavaScript usará este div para inyectar dinámicamente las tarjetas de jabones -->
+        <div id="contenedor-productos" class="cuadrula-productos"></div>
+    </main>
+
+    <!-- Panel Lateral del Carrito (Oculto por defecto en CSS) -->
+    <aside id="carrito-lateral" class="carrito-lateral">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button class="btn-cerrar" onclick="alternarCarrito()">✕</button>
+        </div>
+        
+        <!-- Aquí aparecerán los jabones agregados con sus respectivas cantidades -->
+        <div id="carrito-items"></div>
+
+        <!-- Resumen de Cuenta y Botón de Checkout Falso -->
+        <div class="carrito-total">
+            <p>Total: $ <span id="precio-total">0.00</span></p>
+            <button id="btn-comprar" onclick="simularCompra()">Finalizar Compra Simulada</button>
+        </div>
+    </aside>
+
+    <!-- Conexión con la lógica del proyecto -->
+    <script src="script.js"></script>
 </body>
 </html>

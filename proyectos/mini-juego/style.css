@@ -1,6 +1,6 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1e1e2e;
+    font-family: monospace;
+    background-color: #270202;
     color: #cdd6f4;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 .game-container {
-    background-color: #313244;
+    background-color: #130101;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -24,7 +24,7 @@ input {
     border: none;
 }
 button {
-    background-color: #a6e3a1;
+    background-color: #1d5572;
     color: #11111b;
     border: none;
     padding: 10px 20px;

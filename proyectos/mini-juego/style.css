@@ -42,12 +42,6 @@ button:hover { background-color: #94e2d5; }
 
 @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
 
-
-/* ========================================================
-   🌟 NUEVAS ANIMACIONES: EFECTO MÁQUINA DE ESCRIBIR
-   ======================================================== */
-
-/* El título se escribe rápido (1.2 segundos) */
 .efecto-maquina-titulo {
     overflow: hidden;
     white-space: nowrap;
@@ -56,11 +50,9 @@ button:hover { background-color: #94e2d5; }
     animation: teclearTituloJuego 1.2s ease-out forwards;
 }
 
-/* La adivinanza aparece de forma vertical MUY LENTA (6 segundos) */
 .contenedor-adivinanza-lenta {
     overflow: hidden; 
     max-height: 0;    
-    /* 6s de duración y espera 1.2s a que termine el título */
     animation: teclearAdivinanza 3s linear 1.2s forwards;
 }
 

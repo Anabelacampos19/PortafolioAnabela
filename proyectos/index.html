@@ -30,25 +30,33 @@
     </div>
 </main>
 
+<!-- SCRIPT DE DESBLOQUEO (SE REINICIA AL RECARGAR PÁGINA) -->
 <script>
-    const acertijoResuelto = localStorage.getItem("acertijoCompletado");
+    // 🌟 CAMBIO AQUÍ: Usamos sessionStorage en lugar de localStorage
+    const acertijoResuelto = sessionStorage.getItem("acertijoCompletado");
     const tarjeta = document.getElementById("tarjetaCatalogo");
     const icono = document.getElementById("iconoCatalogo");
     const botonText = document.getElementById("textoBotonCatalogo");
 
     if (acertijoResuelto === "true") {
+        // Quitamos el bloqueo visual
         tarjeta.classList.remove("coming-soon");
         
+        // Cambiamos el candado por el emoji original
         icono.innerText = "🍿";
         
+        // Cambiamos el texto del botón
         botonText.innerText = "Ver catálogo →";
         
+        // Activamos los clics
         tarjeta.style.cursor = "pointer";
+        tarjeta.style.pointerEvents = "auto"; /* Permite hacer clic nuevamente */
         tarjeta.onclick = function() {
             window.location.href = "catalogo-productos/index.html";
         };
     }
 </script>
+
 
         <div class="contenedor-boton-abajo-centro">
             <a href="../index.html" class="boton-volver">← Volver al inicio</a>

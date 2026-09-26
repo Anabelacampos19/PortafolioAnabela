@@ -4,9 +4,11 @@ function checkAnswer() {
 
     const correctAnswer = "el espejo";
 
-    if (userAnswer === correctAnswer || userAnswer === "espejo") {
-        localStorage.setItem("acertijoCompletado", "true");
+        if (userAnswer === correctAnswer || userAnswer === "espejo") {
+        // 🌟 CAMBIO AQUÍ: Guardamos el éxito solo para esta sesión actual
+        sessionStorage.setItem("acertijoCompletado", "true");
 
+        // Mostramos el mensaje de éxito (Tu código de pantalla de premio sigue igual)
         document.getElementById("gameBox").innerHTML = `
             <div class="prize-screen">
                 <h1>🎉 ¡ACERTADO! 🎉</h1>
@@ -26,7 +28,8 @@ function checkAnswer() {
                 </a>
             </div>
         `;
-    } else {
+    }
+     else {
         errorText.innerText = "❌ Respuesta incorrecta. ¡Refleja bien tu respuesta!";
     }
 }

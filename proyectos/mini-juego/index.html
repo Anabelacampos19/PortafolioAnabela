@@ -8,8 +8,13 @@
 </head>
 <body>
     <div class="game-container" id="gameBox">
-        <h1>🧠 El Acertijo Mental</h1>
-        <p class="riddle">"Si me dejas caer, seguro me rompo. Pero si me miras y me sonríes, yo siempre te devolveré la sonrisa. ¿Qué soy?"</p>
+        <!-- Título principal con efecto máquina rápido -->
+        <h1 class="efecto-maquina-titulo">Resolvé esta adivinanza</h1>
+        
+        <!-- Contenedor para que la adivinanza aparezca MUY lento -->
+        <div class="contenedor-adivinanza-lenta">
+            <p class="riddle">"Si me dejas caer, seguro me rompo. Pero si me miras y me sonríes, yo siempre te devolveré la sonrisa. ¿Qué soy?"</p>
+        </div>
         
         <input type="text" id="answerInput" placeholder="Escribe tu respuesta aquí...">
         <button onclick="checkAnswer()">Verificar respuesta</button>
@@ -19,3 +24,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

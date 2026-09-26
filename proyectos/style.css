@@ -61,7 +61,7 @@ header p { color: #a6adc8; }
 }
 .card-icon { font-size: 40px; margin-bottom: 15px; }
 .project-card h2 { margin: 0 0 10px 0; color: #2a3132; font-size: 22px; }
-.project-card p { color: #a6adc8; font-size: 15px; line-height: 1.5; flex-grow: 1; }
+.project-card p { color: #f5c2e7; font-size: 15px; line-height: 1.5; flex-grow: 1; }
 
 .view-btn {
     margin-top: 15px;

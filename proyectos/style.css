@@ -117,3 +117,21 @@ header p { color: #a6adc8; }
   from { max-height: 0; }
   to { max-height: 200px; } 
 }
+.boton-volver {
+    display: inline-block;
+    background-color: #01070d !important; /* CORREGIDO: Azul sólido visible */
+    color: #ffffff !important;           /* Texto blanco que contrasta con el azul */
+    padding: 12px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+    transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #010408 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 102, 204, 0.4);
+}

@@ -7,16 +7,23 @@ body {
     display: flex;
     justify-content: center;
 }
-@keyframes letrasFlotantes {
-    0% {
+/* Definimos la animación de entrada suave */
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        transform: translateY(40px); 
+        transform: translateY(20px); /* Empieza 20 píxeles más abajo */
     }
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0);    
+        transform: translateY(0);    /* Termina en su posición original */
     }
 }
+
+/* Aplicamos la animación a la rejilla de proyectos */
+.projects-grid {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
 .portfolio-container {
     max-width: 800px;
     width: 100%;

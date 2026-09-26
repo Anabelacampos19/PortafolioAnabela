@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Acertijo del Programador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container" id="gameBox">
+        <h1>🧠 El Acertijo Mental</h1>
+        <p class="riddle">"Si me dejas caer, seguro me rompo. Pero si me miras y me sonríes, yo siempre te devolveré la sonrisa. ¿Qué soy?"</p>
+        
+        <input type="text" id="answerInput" placeholder="Escribe tu respuesta aquí...">
+        <button onclick="checkAnswer()">Verificar respuesta</button>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

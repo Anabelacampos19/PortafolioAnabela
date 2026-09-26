@@ -110,7 +110,7 @@ header p { color: #a6adc8; }
 @keyframes teclearTituloGaleria {
   from { width: 0; }
   /* Ajustado a 600px para que entre completo el texto "🚀 Mi Galería de Proyectos" sin cortarse */
-  to { width: 600px; } 
+  to { width: 800px; } 
 }
 
 @keyframes teclearTextoLargoGaleria {

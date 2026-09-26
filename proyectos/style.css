@@ -117,12 +117,27 @@ header p { color: #a6adc8; }
   from { max-height: 0; }
   to { max-height: 200px; } 
 }
-/* Centra el botón usando Flexbox */
-.contenedor-boton {
+/* Estilo para centrar el botón justo en medio de ambas tarjetas */
+.contenedor-boton-medio {
     display: flex;
-    justify-content: center; /* Empuja todo al centro horizontal */
-    width: 100%;
-    margin-top: 40px;        /* Crea un espacio cómodo entre las tarjetas y el botón */
+    justify-content: center;
+    align-items: center;
+    
+    /* 
+       Si las tarjetas se ponen una al lado de la otra (PC), 
+       puedes usar grid-column si quieres expandirlo, o dejar que use su propio espacio.
+       Para asegurar que en pantallas grandes se centre correctamente entre ambas:
+    */
+    padding: 20px;
+}
+
+/* Ajuste para pantallas grandes (PC): 
+   Hacemos que la cuadrícula pase a tener 3 columnas para que el botón quede en el centro exacto */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr auto 1fr; /* Tarjeta izquierda - Botón al centro - Tarjeta derecha */
+        align-items: center;
+    }
 }
 
 /* Tu diseño original del botón (se mantiene intacto) */
@@ -136,6 +151,7 @@ header p { color: #a6adc8; }
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
     transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto del botón se parta en dos líneas */
 }
 
 .boton-volver:hover {

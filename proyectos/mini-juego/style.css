@@ -58,11 +58,10 @@ button:hover { background-color: #94e2d5; }
 
 /* La adivinanza aparece de forma vertical MUY LENTA (6 segundos) */
 .contenedor-adivinanza-lenta {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto 20px auto;
-    width: 0;
-    animation: teclearAdivinanza 1.2s ease-out forwards;
+    overflow: hidden; 
+    max-height: 0;    
+    /* 6s de duración y espera 1.2s a que termine el título */
+    animation: teclearAdivinanza 6s linear 1.2s forwards;
 }
 
 .riddle {
@@ -79,6 +78,6 @@ button:hover { background-color: #94e2d5; }
 }
 
 @keyframes teclearAdivinanza {
-  from { width: 0; }
-  to { width: 100%; } /* Despliega el bloque de texto hacia abajo lentamente */
+  from { max-height: 0; }
+  to { max-height: 150px; } /* Despliega el bloque de texto hacia abajo lentamente */
 }

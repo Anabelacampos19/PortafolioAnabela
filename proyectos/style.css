@@ -92,7 +92,7 @@ header p { color: #a6adc8; }
 .contenedor-tecleado-completo {
     font-family: monospace;
     font-size: 1.05rem;
-    color: #a6adc8; /* Color gris claro/suave legible sobre el fondo oscuro */
+    color: #555555; /* Color gris claro/suave legible sobre el fondo oscuro */
     line-height: 1.6;
     text-align: center; 
     max-width: 650px;

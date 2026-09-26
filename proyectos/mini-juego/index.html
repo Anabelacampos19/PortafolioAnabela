@@ -3,24 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Acertijo del Programador</title>
+    <title>Esencia Vital | Catálogo Estilo Feed (Proyecto de Portafolio)</title>
+    <!-- Vinculamos fuentes elegantes de Google Fonts para replicar tu imagen -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container" id="gameBox">
-        <!-- Título principal con efecto máquina rápido -->
-        <h1 class="efecto-maquina-titulo">Resolvé esta adivinanza</h1>
-        
-        <!-- Contenedor para que la adivinanza aparezca MUY lento -->
-        <div class="contenedor-adivinanza-lenta">
-            <p class="riddle">"Si me dejas caer, seguro me rompo. Pero si me miras y me sonríes, yo siempre te devolveré la sonrisa. ¿Qué soy?"</p>
+
+    <!-- Barra de Navegación Fija -->
+    <header>
+        <div class="logo">🌿 Esencia Vital</div>
+        <div class="carrito-icono" onclick="alternarCarrito()">
+            🛒 <span id="contador-carrito">0</span>
         </div>
-        
-        <input type="text" id="answerInput" placeholder="Escribe tu respuesta aquí...">
-        <button onclick="checkAnswer()">Verificar respuesta</button>
-        <p id="errorMessage" class="error"></p>
+    </header>
+
+    <!-- Banner Informativo del Portafolio -->
+    <div class="banner-portafolio">
+        <p>🚀 <strong>Proyecto para Portafolio:</strong> Inspirado en un feed estético de Instagram. Al hacer clic en los botones ovalados de precio añades productos al carrito dinámico.</p>
     </div>
 
+    <!-- Contenedor del Catálogo -->
+    <main>
+        <!-- Encabezado calcado de tu imagen de referencia -->
+        <div class="catalogo-header-top">
+            <h1 class="titulo-catalogo">CATÁLOGO</h1>
+            <p class="subtitulo-catalogo">De nuestros productos</p>
+        </div>
+
+        <!-- Rejilla donde JavaScript inyectará las tarjetas tipo Instagram -->
+        <div id="contenedor-productos" class="cuadrula-productos"></div>
+    </main>
+
+    <!-- Panel Lateral del Carrito Desplegable -->
+    <aside id="carrito-lateral" class="carrito-lateral">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button class="btn-cerrar" onclick="alternarCarrito()">✕</button>
+        </div>
+        
+        <!-- Elementos del carrito agregados en tiempo real -->
+        <div id="carrito-items"></div>
+
+        <!-- Cierre de Caja Falso -->
+        <div class="carrito-total">
+            <p>Total: $ <span id="precio-total">0.00</span></p>
+            <button id="btn-comprar" onclick="simularCompra()">Finalizar Compra Simulada</button>
+        </div>
+    </aside>
+
+    <!-- Enlace al archivo de lógica -->
     <script src="script.js"></script>
 </body>
 </html>

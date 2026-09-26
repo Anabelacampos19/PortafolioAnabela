@@ -91,28 +91,52 @@ function cargarCatalogo() {
 
     jabones.forEach(jabon => {
         const tarjeta = document.createElement("div");
-        tarjeta.classList.add("tarjeta-producto");
+        tarjeta.classList.add("tarjeta-instagram"); // Nueva clase estética
         tarjeta.innerHTML = `
-            <img src="${jabon.imagen}" alt="${jabon.nombre}">
-            <div class="producto-info">
-                <span class="categoria">${jabon.categoria}</span>
+            <!-- Cabecera de la publicación simulada -->
+            <div class="insta-header">
+                <span class="categoria-insta">🌿 ${jabon.categoria}</span>
+                <span class="tres-puntos">•••</span>
+            </div>
+
+            <!-- Imagen del Producto -->
+            <div class="insta-img-container">
+                <img src="${jabon.imagen}" alt="${jabon.nombre}">
+            </div>
+
+            <!-- Barra de Interacción Estilo Red Social -->
+            <div class="insta-actions">
+                <div class="insta-icons-left">
+                    <span class="icon-btn">❤️</span>
+                    <span class="icon-btn">💬</span>
+                    <span class="icon-btn">✈️</span>
+                </div>
+                <span class="icon-btn">🔖</span>
+            </div>
+
+            <!-- Información e Interacción de Compra -->
+            <div class="insta-body">
                 <h3>${jabon.nombre}</h3>
                 <p>${jabon.descripcion}</p>
-                <div class="precio-fila">
-                    <span class="precio">$${jabon.precio.toFixed(2)}</span>
-                    
-                    <!-- Selector de Cantidad -->
-                    <div class="selector-cantidad">
-                        <label for="cant-${jabon.id}">Cant:</label>
+                
+                <div class="insta-footer-row">
+                    <!-- Selector de Cantidad Estilizado -->
+                    <div class="selector-cantidad-insta">
+                        <label>Cant:</label>
                         <input type="number" id="cant-${jabon.id}" value="1" min="1" max="10">
                     </div>
+                    
+                    <!-- Botón de Precio Ovalado de tu Imagen -->
+                    <button class="btn-precio-comprar" onclick="intentarAgregar(${jabon.id})">
+                        $2500 — Añadir
+                    </button>
                 </div>
-                <button class="btn-agregar" onclick="intentarAgregar(${jabon.id})">Añadir al Carrito</button>
             </div>
         `;
         contenedor.appendChild(tarjeta);
     });
 }
+
 
 // Captura la cantidad seleccionada por el usuario antes de agregar
 function intentarAgregar(id) {

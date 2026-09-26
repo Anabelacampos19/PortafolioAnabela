@@ -130,11 +130,12 @@ header p { color: #a6adc8; }
 /* Contenedor que empuja el botón al centro absoluto abajo */
 .contenedor-boton-abajo-centro {
     display: flex;
-    justify-content: center; /* Alineación horizontal al centro */
+    justify-content: center; /* Empuja el botón al medio horizontal */
     align-items: center;
-    width: 100%;
-    margin-top: 30px; /* Espacio extra por si estás en celular */
+    width: 100%;            /* Toma todo el ancho de la página */
+    margin-top: 40px;       /* Le da aire y separación con las tarjetas de arriba */
 }
+
 
 /* Tu diseño original del botón (se mantiene intacto) */
 .boton-volver {

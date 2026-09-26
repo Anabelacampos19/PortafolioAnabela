@@ -9,26 +9,19 @@
 <body>
     <div class="portfolio-container">
             <header>
-            <!-- Aplicamos la clase del título -->
             <h1 class="efecto-maquina-titulo">Mi Galería de Proyectos</h1>
-            
-            <!-- Aplicamos la clase del texto largo -->
             <div class="contenedor-tecleado-completo">
                 <p>En esta sección voy a mostrar algunos de mis proyectos y una lista de lo que quieras ver. ¡Haz clic en cualquiera para probarlo!</p>
             </div>
         </header>
 
         <main class="projects-grid">
-    <!-- 1. TARJETA DEL JUEGO (Siempre disponible) -->
     <a href="mini-juego/index.html" class="project-card tarjeta-acertijo">
         <div class="card-icon">🧠</div>
         <h2>El Acertijo Mental</h2>
         <p>Resuelve este minijuego de lógica para desbloquear el resto de la galería.</p>
         <span class="view-btn">Jugar ahora →</span>
     </a>
-
-    <!-- 2. TARJETA DEL CATÁLOGO (Bloqueada al inicio) -->
-    <!-- Nota que cambiamos el "a" por un "div" para que no se pueda hacer clic si está bloqueada -->
     <div id="tarjetaCatalogo" class="project-card coming-soon">
         <div class="card-icon" id="iconoCatalogo">🔒</div>
         <h2>Mi Catálogo Personal</h2>
@@ -37,25 +30,19 @@
     </div>
 </main>
 
-<!-- SCRIPT DE DESBLOQUEO EN TIEMPO REAL -->
 <script>
-    // Revisamos si el usuario ya resolvió el acertijo en el juego
     const acertijoResuelto = localStorage.getItem("acertijoCompletado");
     const tarjeta = document.getElementById("tarjetaCatalogo");
     const icono = document.getElementById("iconoCatalogo");
     const botonText = document.getElementById("textoBotonCatalogo");
 
     if (acertijoResuelto === "true") {
-        // 1. Quitamos la clase que la hace ver opaca y bloqueada
         tarjeta.classList.remove("coming-soon");
         
-        // 2. Cambiamos el candado por el emoji original
         icono.innerText = "🍿";
         
-        // 3. Cambiamos el texto del botón
         botonText.innerText = "Ver catálogo →";
         
-        // 4. Convertimos la tarjeta en un enlace real para que puedan entrar
         tarjeta.style.cursor = "pointer";
         tarjeta.onclick = function() {
             window.location.href = "catalogo-productos/index.html";

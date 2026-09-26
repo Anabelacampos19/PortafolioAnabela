@@ -5,10 +5,8 @@ function checkAnswer() {
     const correctAnswer = "el espejo";
 
     if (userAnswer === correctAnswer || userAnswer === "espejo") {
-        // 🌟 GUARDAMOS ELÉXITO: Guardamos que el acertijo ya fue resuelto
         localStorage.setItem("acertijoCompletado", "true");
 
-        // Mostramos el mensaje de éxito y un botón para volver a la galería a ver su premio
         document.getElementById("gameBox").innerHTML = `
             <div class="prize-screen">
                 <h1>🎉 ¡ACERTADO! 🎉</h1>

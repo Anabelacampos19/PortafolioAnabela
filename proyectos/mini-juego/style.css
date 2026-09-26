@@ -61,7 +61,7 @@ button:hover { background-color: #94e2d5; }
     overflow: hidden; 
     max-height: 0;    
     /* 6s de duración y espera 1.2s a que termine el título */
-    animation: teclearAdivinanza 6s linear 1.2s forwards;
+    animation: teclearAdivinanza 3s linear 1.2s forwards;
 }
 
 .riddle {

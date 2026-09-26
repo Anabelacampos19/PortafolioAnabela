@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f2f2f2;
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.hero-section {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('portada.jpg');
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+}
+
+
+.hero-section h1 {
+    color: #ffffff; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+
+    animation: letrasFlotantes 1.5s ease-out forwards;
+}
+
+
+@keyframes letrasFlotantes {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);    
+    }
+}
+
+.hero-section nav {
+    width: 100%; 
+}
+
+.hero-section nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;        
+    gap: 30px; 
+}
+
+.hero-section nav ul li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15); 
+    padding: 12px 26px;                           
+    border-radius: 25px;                          
+    backdrop-filter: blur(5px);                   
+    transition: all 0.3s ease;
+    display: inline-block;                        
+}
+
+.hero-section nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-3px);                  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);       
+}
+
+.sobre-mi-foto img {
+    width: 120px !important;       
+    height: 120px !important;      
+    object-fit: cover;             
+    border-radius: 50%;            
+    border: 3px solid #01050a;     
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    display: block;
+    margin: 0 auto;     
+}
+.sobre-mi-body {
+    background-color: #270202;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-mi-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.sobre-mi-contenedor {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;     
+    max-width: 750px;
+    width: 100%;
+    background-color: #130101; /* Caja blanca de fondo */
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* FOTO CIRCULAR PEQUEÑA */
+.sobre-mi-foto img {
+    width: 130px !important;
+    height: 130px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #01070e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px; 
+}
+
+/* ANIMACIÓN DEL TÍTULO MODERNA */
+.efecto-maquina-titulo {
+    font-family: monospace;
+    font-size: 2.4rem;
+    color: #2a3132;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto 25px auto;
+    width: 0;
+    
+    /* Llama a la animación que añadimos abajo */
+    animation: teclearTitulo 1s ease-out forwards;
+}
+
+/* ANIMACIÓN DE LOS PÁRRAFOS ORIGINALES */
+.contenedor-tecleado-completo {
+    font-family: monospace;
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.6;
+    text-align: left; 
+    max-width: 650px;
+    margin: 0 auto;
+    
+    overflow: hidden; 
+    max-height: 0;    
+    padding-left: 0; 
+    
+    /* Se despliega de forma fluida después de 1 segundo */
+    animation: teclearTextoLargo 3s linear 1s forwards;
+}
+
+/* BOTÓN DE RETORNO (CORREGIDO EL COLOR AZUL REAL VISIBLE) */
+.boton-volver {
+    display: inline-block;
+    background-color: #01070d !important; /* CORREGIDO: Azul sólido visible */
+    color: #ffffff !important;           /* Texto blanco que contrasta con el azul */
+    padding: 12px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
+    transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #010408 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 102, 204, 0.4);
+}
+
+
+/* --- INSTRUCCIONES DE ANIMACIÓN (LAS QUE FALTABAN) --- */
+
+/* CORREGIDO: Añadimos la instrucción para que el título aparezca completo */
+@keyframes teclearTitulo {
+  from { width: 0; }
+  to { width: 250px; } 
+}
+
+@keyframes teclearTextoLargo {
+  from { max-height: 0; }
+  to { max-height: 600px; } 
+}

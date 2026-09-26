@@ -156,3 +156,11 @@ header p { color: #a6adc8; }
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 102, 204, 0.4);
 }
+
+/* Estilo para la tarjeta bloqueada */
+.coming-soon {
+    opacity: 0.5;                /* Se ve más clara/deslavada */
+    cursor: not-allowed;         /* El mouse cambia a un símbolo de prohibido */
+    pointer-events: none;        /* Desactiva cualquier clic por completo */
+    border: 1px dashed #555;     /* Borde punteado de bloqueo */
+}

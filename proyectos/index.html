@@ -19,23 +19,50 @@
         </header>
 
         <main class="projects-grid">
-            <!-- TARJETA DEL JUEGO -->
-            <a href="mini-juego/index.html" class="project-card">
-                <div class="card-icon">🧠</div>
-                <h2>El Acertijo Mental</h2>
-                <p>Un mini juego interactivo hecho con HTML, CSS y JavaScript para poner a prueba tu lógica.</p>
-                <span class="view-btn">Jugar ahora</span>
-            </a>
-             
-            <!-- TARJETA DE EJEMPLO PARA TU PRÓXIMO PROYECTO -->
-            <div class="project-card coming-soon">
-                <div class="card-icon">⏳</div>
-                <h2>Próximo Proyecto</h2>
-                <p>Aquí irá el catálogo de productos o la siguiente aplicación que decida construir.</p>
-                <span class="view-btn">En desarrollo...</span>
-            </div>
-           
-        </main>
+    <!-- 1. TARJETA DEL JUEGO (Siempre disponible) -->
+    <a href="juego-acertijo/index.html" class="project-card tarjeta-acertijo">
+        <div class="card-icon">🧠</div>
+        <h2>El Acertijo Mental</h2>
+        <p>Resuelve este minijuego de lógica para desbloquear el resto de la galería.</p>
+        <span class="view-btn">Jugar ahora →</span>
+    </a>
+
+    <!-- 2. TARJETA DEL CATÁLOGO (Bloqueada al inicio) -->
+    <!-- Nota que cambiamos el "a" por un "div" para que no se pueda hacer clic si está bloqueada -->
+    <div id="tarjetaCatalogo" class="project-card coming-soon">
+        <div class="card-icon" id="iconoCatalogo">🔒</div>
+        <h2>Mi Catálogo Personal</h2>
+        <p>Una galería interactiva para mostrar colecciones. (Bloqueado hasta resolver el acertijo).</p>
+        <span class="view-btn" id="textoBotonCatalogo">Contenido Bloqueado</span>
+    </div>
+</main>
+
+<!-- SCRIPT DE DESBLOQUEO EN TIEMPO REAL -->
+<script>
+    // Revisamos si el usuario ya resolvió el acertijo en el juego
+    const acertijoResuelto = localStorage.getItem("acertijoCompletado");
+    const tarjeta = document.getElementById("tarjetaCatalogo");
+    const icono = document.getElementById("iconoCatalogo");
+    const botonText = document.getElementById("textoBotonCatalogo");
+
+    if (acertijoResuelto === "true") {
+        // 1. Quitamos la clase que la hace ver opaca y bloqueada
+        tarjeta.classList.remove("coming-soon");
+        
+        // 2. Cambiamos el candado por el emoji original
+        icono.innerText = "🍿";
+        
+        // 3. Cambiamos el texto del botón
+        botonText.innerText = "Ver catálogo →";
+        
+        // 4. Convertimos la tarjeta en un enlace real para que puedan entrar
+        tarjeta.style.cursor = "pointer";
+        tarjeta.onclick = function() {
+            window.location.href = "catalogo-productos/index.html";
+        };
+    }
+</script>
+
         <div class="contenedor-boton-abajo-centro">
             <a href="../index.html" class="boton-volver">← Volver al inicio</a>
         </div>

@@ -132,8 +132,9 @@ header p {
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s; /* Se eliminó el texto suelto que causaba el error rojo */
 }
+
 
 .btn-info:hover {
     background-color: #94e2d5;

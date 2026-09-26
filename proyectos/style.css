@@ -117,15 +117,23 @@ header p { color: #a6adc8; }
   from { max-height: 0; }
   to { max-height: 200px; } 
 }
+/* Centra el botón usando Flexbox */
+.contenedor-boton {
+    display: flex;
+    justify-content: center; /* Empuja todo al centro horizontal */
+    width: 100%;
+    margin-top: 40px;        /* Crea un espacio cómodo entre las tarjetas y el botón */
+}
+
+/* Tu diseño original del botón (se mantiene intacto) */
 .boton-volver {
     display: inline-block;
-    background-color: #01070d !important; /* CORREGIDO: Azul sólido visible */
-    color: #ffffff !important;           /* Texto blanco que contrasta con el azul */
+    background-color: #01070d !important;
+    color: #ffffff !important;
     padding: 12px 26px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 25px;
     box-shadow: 0 4px 10px rgba(0, 102, 204, 0.2);
     transition: all 0.3s ease;
 }

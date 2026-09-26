@@ -1,0 +1,140 @@
+body {
+    font-family: monospace;
+    background-color: #270202; /* El fondo rojo vino que te gusta */
+    color: #cdd6f4;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.catalog-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #a6e3a1; /* Verde menta natural para el título */
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+header p {
+    color: #a6adc8;
+}
+
+/* Botón Volver */
+.btn-back {
+    display: inline-block;
+    background-color: #130101;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #555;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #a6e3a1;
+    color: #130101;
+    border-color: #a6e3a1;
+}
+
+/* Rejilla del Catálogo */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas */
+.product-card {
+    background-color: #130101; /* Fondo oscuro de la caja */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #331111;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(166, 227, 161, 0.15);
+    border-color: #a6e3a1;
+}
+
+/* Etiquetas superiores de tipo de jabón */
+.badge-genre {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #1d5572;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Contenedor del icono/emoji */
+.movie-poster {
+    font-size: 60px;
+    background-color: #270202;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #89b4fa; /* Azul suave */
+}
+
+.product-card p {
+    color: #bac2de;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Footer de la tarjeta con precio y botón */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #270202;
+}
+
+.rating {
+    color: #f9e2af; /* Color dorado para el precio */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-info {
+    background-color: #a6e3a1; /* Botón verde */
+    color: #11111b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-info:hover {
+    background-color: #94e2d5;
+}

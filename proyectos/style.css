@@ -2,37 +2,57 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1e1e2e;
     color: #cdd6f4;
+    margin: 0;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
 }
-.game-container {
-    background-color: #313244;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+.portfolio-container {
+    max-width: 800px;
+    width: 100%;
+}
+header {
     text-align: center;
-    max-width: 400px;
+    margin-bottom: 40px;
 }
-input {
-    width: 80%;
-    padding: 10px;
-    margin: 15px 0;
-    border-radius: 6px;
-    border: none;
+header h1 { color: #f5c2e7; margin-bottom: 10px; }
+header p { color: #a6adc8; }
+
+/* Rejilla para acomodar las tarjetas de lado a lado */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
-button {
-    background-color: #a6e3a1;
-    color: #11111b;
-    border: none;
-    padding: 10px 20px;
+
+/* Estilo de cada tarjeta */
+.project-card {
+    background-color: #313244;
+    border-radius: 12px;
+    padding: 25px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 1px solid #f5c2e7;
+}
+.card-icon { font-size: 40px; margin-bottom: 15px; }
+.project-card h2 { margin: 0 0 10px 0; color: #89b4fa; font-size: 22px; }
+.project-card p { color: #bac2de; font-size: 15px; line-height: 1.5; flex-grow: 1; }
+
+.view-btn {
+    margin-top: 15px;
     font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
+    color: #a6e3a1;
+    font-size: 14px;
 }
-button:hover { background-color: #94e2d5; }
-.error { color: #f38ba8; margin-top: 10px; font-weight: bold; }
-.gift-emoji { font-size: 80px; margin: 20px 0; animation: bounce 1s infinite alternate; }
-@keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+
+/* Estilo opcional para tarjetas bloqueadas o futuras */
+.coming-soon { opacity: 0.6; cursor: not-allowed; }
+.coming-soon .view-btn { color: #b4befe; }

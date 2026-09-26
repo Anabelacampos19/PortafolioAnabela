@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Acertijo del Programador</title>
+    <title>Mis Proyectos | Portafolio</title>
     <link rel="stylesheet" href="style.css">
-     <h1>🚀 Mi Galería de Proyectos</h1>
-            <p>En esta sección voy a mostrar algunos de mis proyectos y una lista de lo que quieras ver. ¡Haz clic en cualquiera para probarlo!</p>
 </head>
 <body>
-    <div class="game-container" id="gameBox">
-        <h1>🧠 El Acertijo Mental</h1>
-        <p class="riddle">"Si me dejas caer, seguro me rompo. Pero si me miras y me sonríes, yo siempre te devolveré la sonrisa. ¿Qué soy?"</p>
-        
-        <input type="text" id="answerInput" placeholder="Escribe tu respuesta aquí...">
-        <button onclick="checkAnswer()">Verificar respuesta</button>
-        <p id="errorMessage" class="error"></p>
-    </div>
+    <div class="portfolio-container">
+        <header>
+            <h1>🚀 Mi Galería de Proyectos</h1>
+            <p>Bienvenido a mi espacio de práctica. Haz clic en cualquier tarjeta para probar el proyecto.</p>
+        </header>
 
-    <script src="script.js"></script>
+        <main class="projects-grid">
+            <!-- TARJETA DEL JUEGO -->
+            <a href="juego-acertijo/index.html" class="project-card">
+                <div class="card-icon">🧠</div>
+                <h2>El Acertijo Mental</h2>
+                <p>Un mini juego interactivo hecho con HTML, CSS y JavaScript para poner a prueba tu lógica.</p>
+                <span class="view-btn">Jugar ahora</span>
+            </a>
+
+            <!-- TARJETA DE EJEMPLO PARA TU PRÓXIMO PROYECTO -->
+            <div class="project-card coming-soon">
+                <div class="card-icon">⏳</div>
+                <h2>Próximo Proyecto</h2>
+                <p>Aquí irá el catálogo de productos o la siguiente aplicación que decida construir.</p>
+                <span class="view-btn">En desarrollo...</span>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
+

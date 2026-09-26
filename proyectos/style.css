@@ -73,3 +73,47 @@ header p { color: #a6adc8; }
 /* Estilo opcional para tarjetas bloqueadas o futuras */
 .coming-soon { opacity: 0.6; cursor: not-allowed; }
 .coming-soon .view-btn { color: #b4befe; }
+
+/* --- ANIMACIÓN MÁQUINA DE ESCRIBIR PARA LA GALERÍA --- */
+
+.efecto-maquina-titulo {
+    font-family: monospace;
+    font-size: 2.4rem;
+    color: #f5c2e7; /* Color rosa hermoso para combinar con tu fondo oscuro */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto 25px auto;
+    width: 0;
+    
+    /* Inicia de inmediato y dura 1.5 segundos */
+    animation: teclearTituloGaleria 1.5s ease-out forwards;
+}
+
+.contenedor-tecleado-completo {
+    font-family: monospace;
+    font-size: 1.05rem;
+    color: #a6adc8; /* Color gris claro/suave legible sobre el fondo oscuro */
+    line-height: 1.6;
+    text-align: center; 
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    
+    overflow: hidden; 
+    max-height: 0;    
+    
+    /* Empieza justo después de que el título termine de teclearse (a los 1.5s) */
+    animation: teclearTextoLargoGaleria 3s linear 1.5s forwards;
+}
+
+/* --- KEYFRAMES ADAPTADOS PARA ESTA PÁGINA --- */
+
+@keyframes teclearTituloGaleria {
+  from { width: 0; }
+  /* Ajustado a 600px para que entre completo el texto "🚀 Mi Galería de Proyectos" sin cortarse */
+  to { width: 600px; } 
+}
+
+@keyframes teclearTextoLargoGaleria {
+  from { max-height: 0; }
+  to { max-height: 200px; } 
+}

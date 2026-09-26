@@ -7,7 +7,7 @@ function checkAnswer() {
     // La respuesta correcta al acertijo del teclado
     const correctAnswer = "el espejo";
 
-    if (userAnswer === correctAnswer || userAnswer === "espejo") {
+    if (userAnswer === correctAnswer || userAnswer === "el espejo") {
         // Si gana, cambiamos todo el contenido de la caja por el premio
         gameBox.innerHTML = `
             <div class="prize-screen">

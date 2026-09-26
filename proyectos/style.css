@@ -44,7 +44,7 @@ header p { color: #a6adc8; }
 
 /* Estilo de cada tarjeta */
 .project-card {
-    background-color: #313244;
+    background-color: #130101;
     border-radius: 12px;
     padding: 25px;
     text-decoration: none; /* Quita el subrayado del enlace */

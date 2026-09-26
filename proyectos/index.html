@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="portfolio-container">
-            <header>
+        <header>
             <h1 class="efecto-maquina-titulo">Mi Galería de Proyectos</h1>
             <div class="contenedor-tecleado-completo">
                 <p>En esta sección voy a mostrar algunos de mis proyectos y una lista de lo que quieras ver. ¡Haz clic en cualquiera para probarlo!</p>
@@ -16,47 +16,50 @@
         </header>
 
         <main class="projects-grid">
-    <a href="mini-juego/index.html" class="project-card tarjeta-acertijo">
-        <div class="card-icon">🧠</div>
-        <h2>El Acertijo Mental</h2>
-        <p>Resuelve este minijuego de lógica para desbloquear el resto de la galería.</p>
-        <span class="view-btn">Jugar ahora →</span>
-    </a>
-    <div id="tarjetaCatalogo" class="project-card coming-soon">
-        <div class="card-icon" id="iconoCatalogo">🔒</div>
-        <h2>Mi Catálogo Personal</h2>
-        <p>Una galería interactiva para mostrar colecciones. (Bloqueado hasta resolver el acertijo).</p>
-        <span class="view-btn" id="textoBotonCatalogo">Contenido Bloqueado</span>
-    </div>
-</main>
+            <!-- 1. Tarjeta de tu mini-juego -->
+            <a href="mini-juego/index.html" class="project-card tarjeta-acertijo">
+                <div class="card-icon">🧠</div>
+                <h2>El Acertijo Mental</h2>
+                <p>Resuelve este minijuego de lógica para desbloquear el resto de la galería.</p>
+                <span class="view-btn">Jugar ahora →</span>
+            </a>
 
-<!-- SCRIPT DE DESBLOQUEO (SE REINICIA AL RECARGAR PÁGINA) -->
-<script>
-    // 🌟 CAMBIO AQUÍ: Usamos sessionStorage en lugar de localStorage
-    const acertijoResuelto = sessionStorage.getItem("acertijoCompletado");
-    const tarjeta = document.getElementById("tarjetaCatalogo");
-    const icono = document.getElementById("iconoCatalogo");
-    const botonText = document.getElementById("textoBotonCatalogo");
+            <!-- 2. Tarjeta del Catálogo (Bloqueada) -->
+            <div id="tarjetaCatalogo" class="project-card coming-soon">
+                <div class="card-icon" id="iconoCatalogo">🔒</div>
+                <h2>Mi Catálogo Personal</h2>
+                <p>Una galería interactiva para mostrar colecciones. (Bloqueado hasta resolver el acertijo).</p>
+                <span class="view-btn" id="textoBotonCatalogo">Contenido Bloqueado</span>
+            </div>
+        </main>
 
-    if (acertijoResuelto === "true") {
-        // Quitamos el bloqueo visual
-        tarjeta.classList.remove("coming-soon");
-        
-        // Cambiamos el candado por el emoji original
-        icono.innerText = "🍿";
-        
-        // Cambiamos el texto del botón
-        botonText.innerText = "Ver catálogo →";
-        
-        // Activamos los clics
-        tarjeta.style.cursor = "pointer";
-        tarjeta.style.pointerEvents = "auto"; /* Permite hacer clic nuevamente */
-        tarjeta.onclick = function() {
-            window.location.href = "catalogo-productos/index.html";
-        };
-    }
-</script>
+        <!-- SCRIPT DE DESBLOQUEO MEJORADO Y CORREGIDO -->
+        <script>
+            // Forzamos el uso de window de forma global para evitar bloqueos de rutas
+            const acertijoResuelto = window.sessionStorage.getItem("acertijoCompletado");
+            const tarjeta = document.getElementById("tarjetaCatalogo");
+            const icono = document.getElementById("iconoCatalogo");
+            const botonText = document.getElementById("textoBotonCatalogo");
 
+            if (acertijoResuelto === "true") {
+                // Quitamos el bloqueo visual de CSS
+                tarjeta.classList.remove("coming-soon");
+                
+                // Forzamos la visibilidad y clics eliminando restricciones
+                tarjeta.style.opacity = "1";
+                tarjeta.style.cursor = "pointer";
+                tarjeta.style.pointerEvents = "auto"; 
+                
+                // Cambiamos elementos visuales
+                icono.innerText = "🍿";
+                botonText.innerText = "Ver catálogo →";
+                
+                // Acción de clic para entrar al catálogo
+                tarjeta.onclick = function() {
+                    window.location.href = "catalogo-productos/index.html";
+                };
+            }
+        </script>
 
         <div class="contenedor-boton-abajo-centro">
             <a href="../index.html" class="boton-volver">← Volver al inicio</a>
@@ -64,4 +67,5 @@
     </div>
 </body>
 </html>
+
 

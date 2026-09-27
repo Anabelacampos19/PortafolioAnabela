@@ -95,7 +95,7 @@ function cargarCatalogo() {
         tarjeta.innerHTML = `
             <!-- Cabecera de la publicación simulada -->
             <div class="insta-header">
-                <span class="categoria-insta">🌿 ${jabon.categoria}</span>
+                <span class="categoria-insta"> ${jabon.categoria}</span>
                 <span class="tres-puntos">•••</span>
             </div>
 
@@ -211,7 +211,7 @@ function simularCompra() {
         return;
     }
 
-    alert("🎉 ¡Simulación de Compra Exitosa!\n\nEste es un proyecto front-end para portafolio. En una web real, aquí se conectaría con Stripe o PayPal. ¡Gracias por probar la demo!");
+    alert("🎉 ¡Simulación de Compra Exitosa");
     
     // Vaciar el carrito tras el éxito
     carrito = [];

@@ -99,7 +99,7 @@ main {
     /* 🌟 Aquí forzamos las dos columnas en PC */
     grid-template-columns: repeat(2, 1fr); 
     gap: 35px;
-    max-width: 250px; /* 💡 Bajamos de 950px a 750px para que las tarjetas sean más chicas */
+    max-width: 450px; /* 💡 Bajamos de 950px a 750px para que las tarjetas sean más chicas */
     margin: 0 auto;   /* Centra la rejilla en la pantalla */
 }
 

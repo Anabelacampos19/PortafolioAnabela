@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Tipografía limpia para la app */
+    font-family: 'Plus Jakarta Sans', sans-serif; 
 }
 
 body {
@@ -36,7 +36,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #556b2f; /* Verde oliva */
+    color: #556b2f; 
 }
 
 .carrito-icono {
@@ -62,8 +62,6 @@ header {
     border-bottom: 1px solid #cbdcd6;
 }
 
-/* Título principal idéntico a tu imagen */
-/* Asegura el centrado perfecto del encabezado del catálogo */
 .catalogo-header-top {
     text-align: center;
     margin-top: 40px;
@@ -83,15 +81,12 @@ header {
 
 .subtitulo-catalogo {
     font-family: 'Playfair Display', serif;
-    font-style: italic; /* Letra cursiva elegante */
+    font-style: italic; 
     font-size: 1.5rem;
     color: #6e6153;
     margin-top: -5px;
 }
 
-/* ==========================================
-   3. CUADRÍCULA DEL CATÁLOGO
-   ========================================== */
 /* ==========================================
    3. CUADRÍCULA DEL CATÁLOGO
    ========================================== */
@@ -101,11 +96,11 @@ main {
 
 .cuadrula-productos {
     display: grid;
-    /* 🌟 Aquí forzamos las dos columnas en PC */
+    /* Aquí forzamos las dos columnas en PC */
     grid-template-columns: repeat(2, 1fr); 
     gap: 35px;
-    max-width: 750px; /* 💡 Bajamos de 950px a 750px para que las tarjetas sean más chicas */
-    margin: 0 auto;   /* Centra la rejilla en la pantalla */
+    max-width: 750px; 
+    margin: 0 auto;  
 }
 
 
@@ -122,7 +117,7 @@ main {
    ========================================== */
 .tarjeta-instagram {
     background: #ffffff;
-    border-radius: 20px; /* Bordes bien redondeados como tu referencia */
+    border-radius: 20px; 
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(62, 55, 48, 0.04);
     border: 1px solid #f0ebe1;
@@ -157,7 +152,7 @@ main {
 .insta-img-container {
     width: 100%;
     position: relative;
-    padding-top: 100%; /* Relación 1:1 exacta de las redes sociales */
+    padding-top: 100%; 
 }
 
 .insta-img-container img {
@@ -251,7 +246,7 @@ main {
     color: #3e3730;
     border: 1.5px solid #d4c5b3;
     padding: 9px 20px;
-    border-radius: 30px; /* Redondeado ovalado */
+    border-radius: 30px; 
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -376,8 +371,8 @@ main {
    ========================================== */
 .header-izquierda {
     display: flex;
-    align-items: center; /* Mantiene alineados el botón y el logo al mismo nivel */
-    gap: 16px;           /* Espacio ideal entre el botón y el texto del logo */
+    align-items: center;
+    gap: 16px;           
 }
 
 
@@ -400,32 +395,29 @@ main {
     border-color: #556b2f;
     box-shadow: 0 4px 10px rgba(85, 107, 47, 0.15);
 }
-/* --- Estilos del Cartel Emergente de Agradecimiento --- */
 #modal-agradecimiento {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Se asegura de estar por encima del carrito lateral */
+    z-index: 9999; 
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
 }
 
-/* Esta clase se activa con JavaScript */
 #modal-agradecimiento.mostrar-modal {
     opacity: 1;
     pointer-events: auto;
 }
 
 .contenido-modal {
-    background-color: #130101; /* Color oscuro alineado a tu estilo */
-    border: 2px solid #28a745; /* Borde verde elegante */
+    background-color: #130101; 
+    border: 2px solid #28a745; 
     padding: 40px;
     border-radius: 20px;
     text-align: center;

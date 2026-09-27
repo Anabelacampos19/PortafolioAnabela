@@ -5,10 +5,9 @@ function checkAnswer() {
     const correctAnswer = "espejo";
 
             if (userAnswer === correctAnswer || userAnswer === "espejo") {
-        // Guardamos el éxito usando window de forma global para la sesión actual
         window.sessionStorage.setItem("acertijoCompletado", "true");
 
-        // Cambiamos la pantalla por la de éxito
+        
         document.getElementById("gameBox").innerHTML = `
             <div class="prize-screen">
                 <h1>🎉 ¡ACERTADO! 🎉</h1>

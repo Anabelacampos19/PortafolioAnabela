@@ -8,29 +8,22 @@
 </head>
 <body>
 
-        <!-- Encabezado / Barra de Navegación -->
-        <!-- Encabezado / Barra de Navegación -->
     <header>
-        <!-- Contenedor izquierdo: Botón Volver y luego el Logo -->
         <div class="header-izquierda">
             <a href="../index.html" class="btn-volver-nav">← Volver</a>
             <div class="logo">Jabones Artesanales</div>
         </div>
 
-        <!-- Contenedor derecho: Carrito -->
         <div class="carrito-icono" onclick="alternarCarrito()">
             🛒 <span id="contador-carrito">0</span>
         </div>
     </header>
 
 
-
-    <!-- Banner Informativo para Reclutadores -->
     <div class="banner-portafolio">
         <p>🚀 <strong>Proyecto para Portafolio:</strong> Esta es una tienda 100% interactiva de simulación. Puedes elegir cantidades, sumar productos y completar una orden ficticia sin pasarelas de pago reales.</p>
     </div>
 
-    <!-- Contenedor Principal del Catálogo -->
     <main>
         <div class="catalogo-header-top">
             <h1 class="titulo-catalogo">Nuestro Catálogo</h1>
@@ -39,17 +32,14 @@
         <div id="contenedor-productos" class="cuadrula-productos"></div>
     </main>
 
-    <!-- Panel Lateral del Carrito (Oculto por defecto en CSS) -->
     <aside id="carrito-lateral" class="carrito-lateral">
         <div class="carrito-header">
             <h2>Tu Carrito</h2>
             <button class="btn-cerrar" onclick="alternarCarrito()">✕</button>
         </div>
         
-        <!-- Aquí aparecerán los jabones agregados con sus respectivas cantidades -->
         <div id="carrito-items"></div>
 
-        <!-- Resumen de Cuenta y Botón de Checkout Falso -->
         <div class="carrito-total">
             <p>Total: $ <span id="precio-total">0.00</span></p>
             <button id="btn-comprar" onclick="simularCompra()">Finalizar Compra Simulada</button>
@@ -63,7 +53,6 @@
             <button id="btn-cerrar-modal">Cerrar</button>
         </div>
     </div>
-    <!-- Conexión con la lógica del proyecto -->
     <script src="script.js"></script>
 </body>
 </html>

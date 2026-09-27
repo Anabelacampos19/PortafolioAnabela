@@ -11,11 +11,11 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Empieza 20 píxeles más abajo */
+        transform: translateY(20px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0);    /* Termina en su posición original */
+        transform: translateY(0);    
     }
 }
 
@@ -47,7 +47,7 @@ header p { color: #a6adc8; }
     background-color: #130101;
     border-radius: 12px;
     padding: 25px;
-    text-decoration: none; /* Quita el subrayado del enlace */
+    text-decoration: none; 
     color: inherit;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -79,7 +79,7 @@ header p { color: #a6adc8; }
 .efecto-maquina-titulo {
     font-family: monospace;
     font-size: 2.4rem;
-    color: #2a3132; /* Color rosa hermoso para combinar con tu fondo oscuro */
+    color: #2a3132; 
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto 25px auto;
@@ -92,7 +92,7 @@ header p { color: #a6adc8; }
 .contenedor-tecleado-completo {
     font-family: monospace;
     font-size: 1.05rem;
-    color: #555555; /* Color gris claro/suave legible sobre el fondo oscuro */
+    color: #555555; 
     line-height: 1.6;
     text-align: center; 
     max-width: 650px;
@@ -101,15 +101,12 @@ header p { color: #a6adc8; }
     overflow: hidden; 
     max-height: 0;    
     
-    /* Empieza justo después de que el título termine de teclearse (a los 1.5s) */
     animation: teclearTextoLargoGaleria 3s linear 1.5s forwards;
 }
 
-/* --- KEYFRAMES ADAPTADOS PARA ESTA PÁGINA --- */
 
 @keyframes teclearTituloGaleria {
   from { width: 0; }
-  /* Ajustado a 600px para que entre completo el texto "🚀 Mi Galería de Proyectos" sin cortarse */
   to { width: 800px; } 
 }
 
@@ -121,19 +118,19 @@ header p { color: #a6adc8; }
 @media (min-width: 768px) {
     .projects-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Fuerza exactamente 2 columnas de igual tamaño */
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
-        margin-bottom: 40px; /* Separa las tarjetas del botón de abajo */
+        margin-bottom: 40px; 
     }
 }
 
 /* Contenedor que empuja el botón al centro absoluto abajo */
 .contenedor-boton-abajo-centro {
     display: flex;
-    justify-content: center; /* Empuja el botón al medio horizontal */
+    justify-content: center; 
     align-items: center;
-    width: 100%;            /* Toma todo el ancho de la página */
-    margin-top: 40px;       /* Le da aire y separación con las tarjetas de arriba */
+    width: 100%;            
+    margin-top: 40px;      
 }
 
 
@@ -159,8 +156,8 @@ header p { color: #a6adc8; }
 
 /* Estilo para la tarjeta bloqueada */
 .coming-soon {
-    opacity: 0.5;                /* Se ve más clara/deslavada */
-    cursor: not-allowed;         /* El mouse cambia a un símbolo de prohibido */
-    pointer-events: none;        /* Desactiva cualquier clic por completo */
-    border: 1px dashed #555;     /* Borde punteado de bloqueo */
+    opacity: 0.5;                
+    cursor: not-allowed;         
+    pointer-events: none;        
+    border: 1px dashed #555;    
 }

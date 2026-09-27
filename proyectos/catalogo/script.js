@@ -189,7 +189,7 @@ function alternarCarrito() {
 
 function simularCompra() {
     if (carrito.length === 0) {
-        alert("El carrito está vacío. ¡Agrega algunos jabones primero!");
+        alert("El carrito está vacío");
         return;
     }
 

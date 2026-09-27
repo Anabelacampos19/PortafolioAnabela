@@ -156,7 +156,7 @@ a {
     max-width: 750px;
     margin: 0 auto;
     
-    overflow: hidden; 
+    overflow: visible; /* 💡 Esto asegura que el navegador no esconda ninguna línea en celulares */
     max-height: 0;    
     padding-left: 0; 
     

@@ -138,30 +138,45 @@ a {
 .efecto-maquina-titulo {
     font-family: monospace;
     font-size: 2.4rem;
-    color: #2a3132;
+    color: #ffffff; /* Cambiado a blanco para que resalte en el fondo oscuro */
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto 25px auto;
     width: 0;
-    
-    animation: teclearTitulo 1s ease-out forwards;
+    border-right: 3px solid #0066cc; /* Cursor parpadeante opcional */
+    animation: teclearTitulo 1s steps(8) forwards; /* "Sobre Mí" tiene 8 caracteres */
 }
+
+@keyframes teclearTitulo {
+    from { width: 0; }
+    to { width: 8ch; } /* Se expande exactamente 8 caracteres */
+}
+
 
 .contenedor-tecleado-completo {
     font-family: monospace;
     font-size: 1.05rem;
-    color: #555555;
+    color: #e0e0e0; /* Color claro para contraste */
     line-height: 1.6;
-    text-align: left; 
+    text-align: left;
     max-width: 750px;
     margin: 0 auto;
     
-    overflow: hidden; 
-    max-height: 0;    
-    padding-left: 0; 
-    
-    animation: teclearTextoLargo 3s linear 1s forwards;
+    /* Configuración de la animación */
+    overflow: hidden;
+    max-height: 0;
+    animation: teclearTextoLargo 2s ease-out 1s forwards;
 }
+
+@keyframes teclearTextoLargo {
+    from { 
+        max-height: 0; 
+    }
+    to { 
+        max-height: 1000px; /* Un valor lo suficientemente alto para tus párrafos */
+    }
+}
+
 
 .boton-volver {
     display: inline-block;
@@ -183,12 +198,3 @@ a {
 }
 
 
-@keyframes teclearTitulo {
-  from { width: 0; }
-  to { width: 250px; } 
-}
-
-@keyframes teclearTextoLargo {
-  from { max-height: 0; }
-  to { max-height: 600px; } 
-}

@@ -156,7 +156,7 @@ a {
     max-width: 750px;
     margin: 0 auto;
     
-    overflow: visible; /* 💡 Esto asegura que el navegador no esconda ninguna línea en celulares */
+    overflow: hidden; 
     max-height: 0;    
     padding-left: 0; 
     
@@ -190,5 +190,5 @@ a {
 
 @keyframes teclearTextoLargo {
   from { max-height: 0; }
-  to { max-height: 1200px; } 
+  to { max-height: 00px; } 
 }

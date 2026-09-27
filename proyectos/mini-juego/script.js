@@ -2,7 +2,7 @@ function checkAnswer() {
     const userAnswer = document.getElementById("answerInput").value.toLowerCase().trim();
     const errorText = document.getElementById("errorMessage");
 
-    const correctAnswer = "el espejo";
+    const correctAnswer = "espejo";
 
             if (userAnswer === correctAnswer || userAnswer === "espejo") {
         // Guardamos el éxito usando window de forma global para la sesión actual

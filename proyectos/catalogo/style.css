@@ -58,11 +58,14 @@ header {
 }
 
 /* Título principal idéntico a tu imagen */
+/* Asegura el centrado perfecto del encabezado del catálogo */
 .catalogo-header-top {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    width: 100%;
 }
+
 
 .titulo-catalogo {
     font-family: 'Playfair Display', serif;

@@ -371,3 +371,31 @@ main {
 #btn-comprar:hover {
     background-color: #6e5940;
 }
+/* ==========================================
+   BOTÓN VOLVER EN LA BARRA DE NAVEGACIÓN
+   ========================================== */
+.header-izquierda {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el botón */
+    gap: 20px;           /* Separación de espacio entre el logo y el botón */
+}
+
+.btn-volver-nav {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0e0e0e; /* Fondo crema suave para contrastar con el navbar blanco */
+    color: #eae5de;            /* Marrón suave para el texto */
+    border: 1px solid #ebdccb;
+    padding: 6px 14px;
+    border-radius: 20px;       /* Forma ovalada estética */
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn-volver-nav:hover {
+    background-color: #556b2f; /* Cambia al verde oliva de tu marca */
+    color: #ffffff;            /* Letra blanca al pasar el mouse */
+    border-color: #556b2f;
+    box-shadow: 0 4px 10px rgba(85, 107, 47, 0.15);
+}

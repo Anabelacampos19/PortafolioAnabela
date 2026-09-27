@@ -376,9 +376,10 @@ main {
    ========================================== */
 .header-izquierda {
     display: flex;
-    align-items: center; /* Alinea verticalmente el logo y el botón */
-    gap: 20px;           /* Separación de espacio entre el logo y el botón */
+    align-items: center; /* Mantiene alineados el botón y el logo al mismo nivel */
+    gap: 16px;           /* Espacio ideal entre el botón y el texto del logo */
 }
+
 
 .btn-volver-nav {
     display: inline-block;

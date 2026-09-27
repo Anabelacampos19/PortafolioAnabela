@@ -192,3 +192,29 @@ a {
   from { max-height: 0; }
   to { max-height: 1200px; } 
 }
+/* ==========================================
+   SOLUCIÓN DEFINITIVA PARA PANTALLAS MÓVILES
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Obligamos al texto a hacer saltos de línea normales para que no se salga de la pantalla */
+    .contenedor-tecleado-completo, 
+    .sobre-mi-contenedor p {
+        white-space: normal !important;
+        overflow: visible !important;
+        max-height: none !important; /* Desactiva el bloqueo de altura */
+    }
+
+    /* 2. Ajustamos el título para que quepa en la pantalla del celular */
+    .efecto-maquina-titulo {
+        font-size: 1.8rem; /* Un poco más chico para celulares */
+        white-space: normal !important;
+        width: 100% !important;
+        animation: none !important; /* Apagamos la animación si interfiere con el ancho */
+    }
+
+    /* 3. Evitamos que la animación bloquee el texto largo en el móvil */
+    .contenedor-tecleado-completo {
+        animation: none !important; 
+        opacity: 1 !important;
+    }
+}

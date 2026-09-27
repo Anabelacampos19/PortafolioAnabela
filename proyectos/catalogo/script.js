@@ -121,7 +121,7 @@ function cargarCatalogo() {
                     
                     <!-- Botón de Precio Ovalado de tu Imagen -->
                     <button class="btn-precio-comprar" onclick="intentarAgregar(${jabon.id})">
-                        $2500 — Añadir
+                        $4000 — Añadir
                     </button>
                 </div>
             </div>

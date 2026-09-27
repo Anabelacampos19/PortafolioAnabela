@@ -87,6 +87,9 @@ header {
 /* ==========================================
    3. CUADRÍCULA DEL CATÁLOGO
    ========================================== */
+/* ==========================================
+   3. CUADRÍCULA DEL CATÁLOGO
+   ========================================== */
 main {
     padding: 20px 5% 60px 5%;
 }
@@ -96,9 +99,10 @@ main {
     /* 🌟 Aquí forzamos las dos columnas en PC */
     grid-template-columns: repeat(2, 1fr); 
     gap: 35px;
-    max-width: 950px; /* Evita que las tarjetas se estiren demasiado */
+    max-width: 750px; /* 💡 Bajamos de 950px a 750px para que las tarjetas sean más chicas */
     margin: 0 auto;   /* Centra la rejilla en la pantalla */
 }
+
 
 /* 📱 Ajuste automático para que en celulares se vea de uno en uno */
 @media (max-width: 768px) {

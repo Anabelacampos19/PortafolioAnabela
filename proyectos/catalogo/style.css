@@ -400,3 +400,66 @@ main {
     border-color: #556b2f;
     box-shadow: 0 4px 10px rgba(85, 107, 47, 0.15);
 }
+/* --- Estilos del Cartel Emergente de Agradecimiento --- */
+#modal-agradecimiento {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Se asegura de estar por encima del carrito lateral */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Esta clase se activa con JavaScript */
+#modal-agradecimiento.mostrar-modal {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.contenido-modal {
+    background-color: #130101; /* Color oscuro alineado a tu estilo */
+    border: 2px solid #28a745; /* Borde verde elegante */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(40, 167, 69, 0.3);
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.contenido-modal h2 {
+    margin-top: 0;
+    color: #28a745;
+}
+
+.firma {
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #28a745;
+}
+
+#btn-cerrar-modal {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+#btn-cerrar-modal:hover {
+    background-color: #555;
+}

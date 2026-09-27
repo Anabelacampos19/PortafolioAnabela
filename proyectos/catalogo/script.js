@@ -211,12 +211,20 @@ function simularCompra() {
         return;
     }
 
-    alert("🎉 ¡Simulación de Compra Exitosa");
-    
-    // Vaciar el carrito tras el éxito
+    // Vaciar el carrito tras el éxito y actualizar la web
     carrito = [];
     actualizarInterfaz();
     alternarCarrito();
+    
+    // Mostramos tu nuevo cartel de agradecimiento en pantalla
+    document.getElementById("modal-agradecimiento").classList.add("mostrar-modal");
 }
 
+// ASÍ SE CIERRA CORRECTAMENTE EL EVENTO (Faltaba el }); aquí abajo)
+document.getElementById("btn-cerrar-modal").addEventListener("click", () => {
+    document.getElementById("modal-agradecimiento").classList.remove("mostrar-modal");
+});
+
+// Tus eventos iniciales continúan aquí abajo sin problemas
 document.addEventListener("DOMContentLoaded", cargarCatalogo);
+
